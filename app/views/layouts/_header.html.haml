@@ -1,0 +1,57 @@
+/= link_to (image_tag "SonicPicsV2.png", :alt => "SonicPics Logo"), root_path
+
+
+.navbar.navbar-inverse.navbar-static-top
+
+  .container
+
+    .navbar-header
+
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .accessible
+        <a href="#content">Skip to main content</a>
+        <a href="#main_nav">Skip to navigation</a>
+      = link_to logo, root_path, :class => 'brand', :id => 'logo'
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to 'Home', root_path
+        -#
+          %li
+            %a{href: "#FAQs"} FAQs
+          %li
+            %a{href: "#Samples"} Samples
+        -#%li
+          =link_to "Contact Us", "http://www.humbledaisy.com/public/contactUs", target: "_blank"
+          -#=link_to "Contact Us", contact_path
+
+        %li
+          =link_to "Contact Us", contact_path
+        %li
+          = link_to 'Support', support_path
+
+
+
+        -# comment out drop down
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+              Dropdown
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li.dropdown-header Nav header
+              %li
+                %a{href: "#"} Separated link
+              %li
+                %a{href: "#"} One more separated link
+    / /.nav-collapse
+

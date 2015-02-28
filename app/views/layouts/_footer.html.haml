@@ -1,0 +1,21 @@
+- if user_signed_in?
+  .btn-group.dropup
+
+    %a{:class => 'btn btn-default btn-xs  dropdown-toggle', "data-toggle" => 'dropdown', :href => '#'}
+      -#= current_user.name || current_user.email
+      = current_user.email
+      %span{:class => 'caret'}
+    %ul.dropdown-menu
+      %li
+        %i.fa.fa-user
+          = link_to "Profile", edit_user_registration_path(current_user.id)
+
+      -#- if current_user.admin?
+        %li
+          %i.fa.fa-cogs
+            = link_to('Admin', users_path)
+
+
+      %li
+        %i.fa.fa-sign-out
+          = link_to 'Sign out', destroy_user_session_path, :method=>'delete'
