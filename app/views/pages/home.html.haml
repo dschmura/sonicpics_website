@@ -1,0 +1,233 @@
+
+/ Carousel\
+#myCarousel.carousel.slide
+  / Indicators
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+    -#%li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+  .carousel-inner
+    .item.active
+      %img{alt: "My favorite part of our field trip to the museum was...",  src: "#{ asset_path 'banner_museum.jpg' }" , style: "width: 100%" }/
+      .container
+        .carousel-caption
+          %h1 Digital Storytelling has never been easier.
+          %p With SonicPics you can create, record, & share custom photo slideshows you create on an iPhone, iPod Touch, or iPad.
+          %p
+            %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
+              %img{src: "#{ asset_path 'AppStoreBadge.png' }" }
+    .item
+      %img{alt: "Just unlocked the 'Engaged Student' badge with SonicPics!", src: "#{ asset_path 'banner_boygrass.jpg' }", style: "width: 100%;" }
+      .container
+        .carou
+          %h1 The start of a storied career.
+          %p Let them tell their story and they will share their world!
+          %p
+            %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
+              %img{src: "#{ asset_path 'AppStoreBadge.png'}" }
+    -#
+      .item
+        %img{alt: "Third slide", "data-src" => "holder.js/100%x500/auto/#777:#7a7a7a/text:Third slide", src: "data:image/png;base64,"}/
+        .container
+          .carousel-caption
+            %h1 One more for good measure.
+            %p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+            %p
+              %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
+                %img{src: "#{ asset_path 'AppStoreBadge.png' }" }
+  %a.left.carousel-control{"data-slide" => "prev", href: "#myCarousel"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", href: "#myCarousel"}
+    %span.glyphicon.glyphicon-chevron-right
+
+.carousel
+  .container
+    / Three columns of text below the carousel
+    .row
+      .col-md-4.col-sm-4
+
+        -#%img.img-circle.img-responsive{src: "assets/recordingimage.png", alt: "Of Mice and Dave", title: "Of Mice and Dave", style: "width: 152px; height: 152px;" }
+        %h2 Key Features
+        %p SonicPics is feature-rich. We have thought through how you will want to create and share your stories to make it simple.
+        %p
+          %a.btn.btn-default{href: "#features"} View details »
+
+      .col-md-4.col-sm-4
+        -#%img.img-circle.img-responsive{src: "assets/recordingimage.png", alt: "Of Mice and Dave", title: "Of Mice and Dave", style: "width: 152px; height: 152px;" }
+        %h2 Sample Uses
+        %p SonicPics is a versatile app that allows you to express yourself easily. Here are some ideas to get you started.
+        %p
+          %a.btn.btn-default{href: "#sample_uses"} View details »
+
+      .col-md-4.col-sm-4
+        -#%img.img-circle.img-responsive{src: "assets/recordingimage.png", alt: "Of Mice and Dave", title: "Of Mice and Dave", style: "width: 152px; height: 152px;" }
+        %h2 In the Classroom
+        %p Engage your students and capture what they are thinking and learning.
+        %p
+          %a.btn.btn-default{href: "#classroom"} View details »
+      -#
+        .col-md-3
+          -#%img.img-circle.img-responsive{src: "assets/recordingimage.png", alt: "Of Mice and Dave", title: "Of Mice and Dave", style: "width: 152px; height: 152px;" }
+          %h2 Screen shots
+          %p Take a peak.
+          %p
+            %a.btn.btn-default{href: "#classroom"} View details »
+
+.containter.col-md-offset-1
+  .row.container
+    %h2#features Key Features
+
+    .col-md-5.col-sm-5.features
+      .create_slideshows
+        %b Create Slideshows
+        %p Create slideshows quickly and easily.
+
+      .add_images
+        %b Add Images As Slides
+        %p Use the images on your iPhone, iPod Touch or iPad or take new ones to use in your slideshow.
+
+      .record_narrations
+        %b Record Narrations
+        %p Record a narration for your slideshow. SonicPics synchronizes your images to your recorded audio.
+
+      .intuitive_interface
+        %b Intuitive Interface
+        %p SonicPics is simple to use. As a user put it "It's clean, simple and intuitive."
+
+    .col-md-5.col-sm-5.features.col-md-offset-1.col-sm-offset-1
+      .playback
+        %b Playback Recordings On Your Device
+        %p Play your recorded slideshows on your iPad, iPhone or iPod Touch.
+      .share_recordings
+        %b Share Recorded Slideshows Online
+        %p Publish your recorded slideshows to YouTube, share to your computer via wifi, or email to your friends.
+      .video_out
+        %b Supports Video Out
+        %p Project your images as you record and then share the recording on an external display.
+      .universal_app
+        %b Universal App
+        %p SonicPics now runs NATIVELY on your iPhone, iPod Touch and iPad.
+
+
+  / START THE FEATURETTES
+  %hr.featurette-divider/
+  .row.container.featurette#classroom
+    .col-md-12.col-xs-12.col-sm-12
+      %h2.featurette-heading
+
+        SonicPics Engages Students.
+      = image_tag("SonicPicsCascadingPhotos.png", :alt => "SonicPics image cascade", :title => "SonicPics", :class => "wrapReady")
+
+      %p.lead   SonicPics is a very easy to use tool for turning your images into custom slideshow movies that you can share with your friends online! SonicPics lets you add images from your iPhone's photo library or camera, arrange your photos, and then narrate the project to create an enhanced m4v video (complete with chapters).
+      %p.lead Take photos of your kids, special events, weddings, vacations, the new pet, or first day at camp and narrate them with SonicPics!
+      %p.lead Narrate your photos like never before, flipping to each image as you are ready to talk. You choose the timing. SonicPics makes it easy to make slideshow movies on your iPod touch or iPhone.
+      %p.lead When the recording is complete, publish your movie to your YouTube account or to your computer (wifi required).
+
+
+
+
+  .row.container.featurette#sample_uses
+    .col-md-5.col-sm-1
+      %img.featurette-image.img-responsive
+        .limiter
+          %ul#portfolio
+            %li
+              %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
+                %img{alt: "Fabulous!  This app is way underpriced!", src: "#{ asset_path 'User_Quotes/Underpriced.png' }", width: "350px"}/
+            %li
+              %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
+                %img{alt: "Already found more uses for it than the one I originally downloaded it for.  ", src: "#{ asset_path 'User_Quotes/MoreUses.png'} ", width: "350px"}/
+            %li
+              %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
+                %img{alt: "Easy to use and great for a zillion uses!", src: "#{ asset_path 'User_Quotes/ZillionUsersWhite.png' }", width: "350px"}/
+        %noscript
+          #portfolio
+            %ul
+              %li
+                %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
+                  %img{alt: "Whizzkids", src: "assets/User_Quotes/Underpriced.png"}/
+    .col-md-3.col-sm-3.col-xs-3
+      %h2.featurette-heading
+        Sample Uses
+
+      %p.lead
+        %ul
+          %li Digital Storytelling
+          %li Class field trip
+          %li New baby
+          %li Lecture recording
+          %li Creating mini-presentations on the road
+          %li Out with friends
+          %li Travel Logs
+          %li Conference notes
+          %li Honeymoon
+          %li Museum tours
+          %li Photo tours
+          %li Language instruction
+
+    .col-md-3.col-sm-3.col-xs-3
+      %h2.featurette-heading
+        continued...
+      %p.lead
+        %ul
+          %li Create Audio books
+          %li Lab notes
+          %li Insurance claims
+          %li Accident documentation
+          %li Medical diagnosis / dictation
+          %li Land surveys
+          %li Real estate tours
+          %li Home shopping
+          %li New town experiences
+          %li Staff introductions
+          %li Helping boyfriend study names/faces before meeting girlfriend's family.
+
+  -#
+    %hr.featurette-divider/
+    .row.featurette
+      .col-md-7
+        %h2.featurette-heading
+          And lastly, this one.
+          %span.text-muted Checkmate.
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-md-5
+        %img.featurette-image.img-responsive{alt: "Generic placeholder image", "data-src" => "holder.js/500x500/auto", src: "data:image/png;base64,"}/
+
+
+    %hr.featurette-divider/
+  / /END THE FEATURETTES
+
+
+  / FOOTER
+  %footer
+    %p.pull-right
+      %a{href: "#"} Back to top
+    %p
+      \© 2013 Humble Daisy, Inc.
+      -#%a{href: "#"} Privacy
+
+      -#%a{href: "#"} Terms
+/ /.container
+/
+
+
+:javascript
+  $('.carousel').carousel({
+    interval: 25000
+  })
+  $(document).ready(function(){
+      $('.wrapReady').slickWrap();
+  });
+
+
+   $(document).ready(
+     function(){
+   			$('ul#portfolio').innerfade({
+
+   				speed: 1000,
+   				timeout: 8000,
+   				type: 'random',
+   				containerheight: '100px'
+   			});
+
+   	});

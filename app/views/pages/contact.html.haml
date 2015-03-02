@@ -1,0 +1,98 @@
+.container
+
+  %h1
+    = @page_title
+
+  %h3
+    If you have a support request, or a question about how SonicPics works, please contact us via email at
+    = link_to "Contact Us", new_contact_path
+    
+    %hr
+
+    
+  %p
+    You can contact us in a variety of ways, here are a few;
+    .col-md-3.col-sm-2
+
+      %span.fa-stack.fa-lg
+        %i.fa.fa-circle.text-danger.fa-stack-2x
+        %i.fa.fa-envelope.fa-stack-1x.fa-inverse
+
+      %b
+        = link_to "Email Us", new_contact_path
+
+
+
+    .col-md-3.col-sm-2
+
+      %span.fa-stack.fa-lg
+        %i.fa.fa-circle.text-danger.fa-stack-2x
+        %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+      %b
+        %a{"data-original-title" => "Follow me on Twitter.", "data-placement" => "right", :href => "https://twitter.com/humbledaisy", :rel => "tooltip", target: "_blank" } @humbledaisy
+
+    .col-md-3.col-sm-2
+      %span.fa-stack.fa-lg
+        %i.fa.fa-circle.text-danger.fa-stack-2x
+        %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+
+      %b
+        %a{"data-original-title" => "Maybe we can be friends?", "data-placement" => "right", :href => "http://www.facebook.com/sonicpics", :rel => "tooltip", target: "_blank" } Facebook
+    .col-md-3.col-sm-2
+
+      .col-md-3.col-sm-2
+        %span.fa-stack.fa-lg
+          %i.fa.fa-circle.text-danger.fa-stack-2x
+          %i.fa.fa-linkedin.fa-stack-1x.fa-inverse
+      %b
+      %a{"data-original-title" => "Check me out on LinkedIn.", "data-placement" => "right", :href => "http://lnkd.in/VuU9xY", :rel => "tooltip" } LinkedIn
+
+
+      -#
+        %p{style: "float:left; "}
+          Humble Daisy, Inc
+          %br/
+          1342 Arella Blvd
+          %br/
+          Ann Arbor, MI 48103 USA
+          %br/
+          (734) 864-1232 -- Phone
+
+          %br/
+          (800) 721-7259 -- Fax
+        %p{style: "float:left; padding-left:27%; "}
+          For general inquiries contact
+          %br/
+          %a{href: "mailto:humbledaisy@humbledaisy.com", target: "_blank"} humbledaisy@humbledaisy.com
+        %p{style: "float:left;  clear:left"}
+          David Chmura
+          %br/
+          Chief Instigator
+          %br/
+          %a{href: "mailto:dschmura@humbledaisy.com", target: "_blank"} dschmura@humbledaisy.com
+          %br/
+          (734) 864-1232 -- Phone
+          = succeed "(for" do
+            %br/
+          %br/
+          (800) 721-7259 -- Fax
+        %p{style: "float:left;  padding-left:25% "}
+          Michael Chmura
+          %br/
+          Usability Consultant
+          %br/
+          %a{href: "mailto:mbchmura@humbledaisy.com", target: "_blank"} mbchmura@humbledaisy.com
+          %br/
+          (734) 864-1232 -- Phone
+          = succeed "(for" do
+            %br/
+          %br/
+          (800) 721-7259 -- Fax
+        %hr{style: "clear:both; width:98%; float:left; margin-left:-1em;"}/
+        %p{style: "clear:both;"}
+          You can contact the Humble Daisy by sending an email to
+          = succeed "." do
+            %a{href: "mailto:humbledaisy@humbledaisy.com"} humbledaisy@humbledaisy.com
+        %p
+          Information on how to purchase our products is available on the
+          %a{href: "../store/"} Purchasing Page

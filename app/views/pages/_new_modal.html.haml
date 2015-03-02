@@ -1,0 +1,40 @@
+= form_for @contact do |f|
+
+  - if @contact.errors.any?
+    .alert.alert-danger.fade.in
+      %a.close{"data-dismiss" => "alert", :href => "#"} ×
+      %ul
+      - @contact.errors.full_messages.each do |msg|
+        %li
+          = msg
+  .row
+    .col-md-12
+      .input-group.input-group-sm.col-md-4
+        %span.input-group-addon Your Name
+        = f.text_field :name, :placeholder => "Ron Burgundy", class: "form-control ", :input_html => { :tabindex => '1' }
+
+      %br
+
+
+      .input-group.input-group-sm.col-md-5
+        %span.input-group-addon EMail Address
+        = f.text_field :email, :placeholder => "email@example.com", class: "form-control", :input_html => { :tabindex => '2' }
+
+      %br
+
+
+      .input-group.input-group-sm.col-md-7
+        %span.input-group-addon Message
+        -#= f.text_area :message, :placeholder => "Dear kind people", class: "form-control", :input_html => { :tabindex => '3' }
+        = text_area_tag(:message, nil, columns: 30, rows: 8, class: "form-control", :placeholder => "Dear kind people,")
+
+      %br
+      .hidden
+        .input-group.input-group-sm.col-md-12
+          %span.input-group-addon EMail Address
+          = f.text_field :nickname, :placeholder => "this should be blank", class: "form-control", :input_html => { :tabindex => '4' }
+      %br
+      .actions
+        = f.button :submit
+        |
+        = link_to "Cancel", @classroom

@@ -1,0 +1,61 @@
+%h1
+  = @page_title
+
+/ The Bootstrap Image Gallery lightbox, should be a child element of the document body
+#blueimp-gallery.blueimp-gallery
+  / The container for the modal slides
+  .slides
+  / Controls for the borderless lightbox
+  %h3.title
+  %a.prev ‹
+  %a.next ›
+  %a.close ×
+  %a.play-pause
+  %ol.indicator
+  / The modal dialog, which will be used to wrap the lightbox content
+  .modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", type: "button"} ×
+          %h4.modal-title
+        .modal-body.next
+        .modal-footer
+          %button.btn.btn-default.pull-left.prev{type: "button"}
+            %i.glyphicon.glyphicon-chevron-left
+            Previous
+          %button.btn.btn-primary.next{type: "button"}
+            Next
+            %i.glyphicon.glyphicon-chevron-right
+
+#links
+  %a{"data-gallery" => "", href: "#{ asset_path 'AppStoreBadge.png' }", title: "App Store"}
+    %img{alt: "Banana", src: "images/screen_shots/thumbnails/banana.jpg"}/
+  %a{"data-gallery" => "", href: "images/screen_shots/2b.png", title: "Apple"}
+    %img{alt: "Apple", src: "images/screen_shots/thumbnails/apple.jpg"}/
+  %a{"data-gallery" => "", href: "images/screen_shots/3b.png", title: "Orange"}
+    %img{alt: "Orange", src: "images/thumbnails/screen_shots/orange.jpg"}/
+   
+%p
+  You can contact me in a variety of ways, here are a few;
+
+.col-md-3
+  %i.icon-envelope
+  -# 
+
+
+.col-md-3
+  %i.icon-twitter
+  %b
+    %a{"data-original-title" => "Follow me on Twitter.", "data-placement" => "right", :href => "https://twitter.com/humbledaisy", :rel => "tooltip" } @dschmura
+
+.col-md-3
+  %i.icon-facebook-sign
+  %b
+    %a{"data-original-title" => "Maybe we can be friends?", "data-placement" => "right", :href => "https://www.facebook.com/dschmura", :rel => "tooltip" } Facebook
+.col-md-3
+  %i.icon-linkedin-sign
+  %b
+    %a{"data-original-title" => "Check me out on LinkedIn.", "data-placement" => "right", :href => "http://lnkd.in/VuU9xY", :rel => "tooltip" } LinkedIn  
+		
+%script{src: "http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"}		  
