@@ -19,26 +19,17 @@
     .item
       %img{alt: "Just unlocked the 'Engaged Student' badge with SonicPics!", src: "#{ asset_path 'banner_boygrass.jpg' }", style: "width: 100%;" }
       .container
-        .carou
+        .carousel-caption
           %h1 The start of a storied career.
           %p Let them tell their story and they will share their world!
           %p
             %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
               %img{src: "#{ asset_path 'AppStoreBadge.png'}" }
-    -#
-      .item
-        %img{alt: "Third slide", "data-src" => "holder.js/100%x500/auto/#777:#7a7a7a/text:Third slide", src: "data:image/png;base64,"}/
-        .container
-          .carousel-caption
-            %h1 One more for good measure.
-            %p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-            %p
-              %a{href: "https://itunes.apple.com/app/sonicpics/id345295488?mt=8", target: "_blank"}
-                %img{src: "#{ asset_path 'AppStoreBadge.png' }" }
+
   %a.left.carousel-control{"data-slide" => "prev", href: "#myCarousel"}
-    %span.glyphicon.glyphicon-chevron-left
+    %span.fa.fa-chevron-left
   %a.right.carousel-control{"data-slide" => "next", href: "#myCarousel"}
-    %span.glyphicon.glyphicon-chevron-right
+    %span.fa.fa-chevron-right
 
 .carousel
   .container
