@@ -38,7 +38,7 @@ group :production do
   gem 'unicorn'
 end
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
+gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-rbenv', "~> 2.0"
 
