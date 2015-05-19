@@ -37,6 +37,7 @@ gem 'devise'
 group :production do
   gem 'unicorn'
 end
+gem 'foreman'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 gem 'capistrano-bundler'
