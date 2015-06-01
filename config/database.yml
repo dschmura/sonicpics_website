@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: sonicpics_production
-  username: sonicpics
+  username: pguser
   password: <%= ENV['SONICPICS_DATABASE_PASSWORD'] %>
