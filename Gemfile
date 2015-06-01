@@ -41,6 +41,7 @@ gem 'foreman'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 gem 'capistrano-bundler'
+gem 'capistrano-unicorn'
 gem 'capistrano-rbenv', "~> 2.0", require: false
 
 group :development, :test do
