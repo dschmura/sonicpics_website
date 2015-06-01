@@ -17,9 +17,11 @@ require 'capistrano/deploy'
 #
 # require 'capistrano/rvm'
 require 'capistrano/rbenv'
+set :rbenv_ruby, '2.2.2'
+
 require 'capistrano/rails'
 #require 'capistrano/unicorn'
-require 'capistrano/unicorn-nginx'
+require 'capistrano/unicorn_nginx'
 # require 'capistrano/chruby'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
