@@ -20,7 +20,7 @@ require 'capistrano/rbenv'
 set :rbenv_ruby, '2.2.2'
 
 require 'capistrano/rails'
-#require 'capistrano/unicorn'
+# require 'capistrano/unicorn'
 require 'capistrano/unicorn_nginx'
 # require 'capistrano/chruby'
 require 'capistrano/bundler'
@@ -29,5 +29,5 @@ require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
-#Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+# Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
