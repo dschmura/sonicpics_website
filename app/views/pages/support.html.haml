@@ -5,17 +5,18 @@
   %p
     If you are have a question about SonicPics, please contact us via email at
 
-    =link_to "SonicPics Support", new_contact_path
+    //=link_to "SonicPics Support", new_contact_path
+    = mail_to "support@sonicpics.com", "Support Contact", subject: "SonicPics Support"
 
   %h2 Frequently Asked Questions
-  
+
   %h3 Why does SonicPics need access to my location data?
-  %p 
-    When adding images from your device library for the first time using the latest version of SonicPics your device will prompt you to allow access to location data. Photos in your Photo Library may contain location specific information. 
+  %p
+    When adding images from your device library for the first time using the latest version of SonicPics your device will prompt you to allow access to location data. Photos in your Photo Library may contain location specific information.
     %b SonicPics does NOT read or use this information in any way.
-  %p 
+  %p
     Apple requires us to have users enable Location Services for SonicPics to be able to access photos from your Photo Library.
-  %p 
+  %p
     For more information about changing your location settings and to learn more about iOS location services, see Apple's Understanding Location Services support article.  (
     =link_to 'http://support.apple.com/kb/HT1975', 'http://support.apple.com/kb/HT1975', target: '_blank'
 
